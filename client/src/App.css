@@ -1,0 +1,56 @@
+* {
+    font-family: sans-serif;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  :root {
+    font-size: 10px;
+  }
+  @media (max-width: 1200px) {
+    :root {
+      font-size: 9px;
+    }
+  }
+  @media (max-width: 1024px) {
+    :root {
+      font-size: 8px;
+    }
+  }
+  @media (max-width: 920px) {
+    :root {
+      font-size: 9px;
+    }
+  }
+  @media (max-width: 700px) {
+    :root {
+      font-size: 8px;
+    }
+  }
+  @media (max-width: 620px) {
+    :root {
+      font-size: 10px;
+    }
+  }
+  
+  button,
+  .cta-button,
+  .landing-page .welcome-message .learn-to-code .ctas a,
+  .landing-page .featured-videos .more-videos,
+  .video .player-and-topics .player .player-controls a,
+  .video .links-and-books .player .player-controls a,
+  .main2__item a,
+  .video-card .buttons a,
+  .video-list a.watch-all-button {
+    display: inline-block;
+    border-radius: 5px;
+    padding: 15px;
+    border: none;
+    text-decoration: none;
+    vertical-align: middle;
+    text-align: center;
+    box-shadow: 0px 6px 0px 0px rgba(0, 0, 0, 0.06);
+    transition: all 150ms cubic-bezier(0.4, 0, 0.2, 1);
+    transform: scale(1);
+  }
+  

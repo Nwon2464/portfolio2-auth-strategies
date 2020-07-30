@@ -1,0 +1,244 @@
+:root {
+  --primary-red: #f64f59;
+}
+
+pre {
+  white-space: pre-wrap; /* Since CSS 2.1 */
+  white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+  white-space: -pre-wrap; /* Opera 4-6 */
+  white-space: -o-pre-wrap; /* Opera 7 */
+  word-wrap: break-word; /* Internet Explorer 5.5+ */
+  color: #ececec;
+  font-size: 13px;
+}
+
+button {
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+.btn {
+  text-decoration: none;
+  color: white;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+.btn-icon {
+  width: 15px;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.btn-txt {
+  padding-left: 10px;
+  vertical-align: middle;
+}
+
+.menu-btn {
+  padding: 12px 15px;
+  display: inline-block;
+}
+
+.menu-btn:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+}
+
+.login-btn {
+  padding: 5px 20px;
+  border-radius: 3px;
+}
+.menu-bar {
+  overflow: hidden;
+  background-color: var(--primary-red);
+  box-shadow: -5px -7px 15px 1px rgba(0, 0, 0, 0.8);
+  padding-left: 20%;
+  padding-right: 20%;
+}
+
+.disabled {
+  pointer-events: none;
+}
+
+.app-icon-container {
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  font-size: 1.5rem;
+  border-radius: 50%;
+}
+
+/* .card {
+  background: white;
+  border-radius: 2px;
+  display: inline-block;
+  margin-right: 2em;
+  margin-bottom:20px;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+  transition: all ease-in-out 0.6s;
+} */
+/* .cardList {
+  margin-right: 10px;
+  text-align: center;
+  padding: 5px 0px 5px 10px;
+}
+
+.card:hover {
+  transform: translateY(-20px);
+} */
+.page {
+  text-align: center;
+
+  width: 50%;
+  margin: 0 auto;
+}
+
+.page-title {
+  font-weight: 400;
+  font-size: 35px;
+}
+
+.passport-title {
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+.passport-title span {
+  color: var(--primary-red);
+}
+
+.window {
+  width: 80%;
+  
+  margin: 20px auto;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+.title-bar {
+  background-color: #ececec;
+  border-top-right-radius: 6px;
+  border-top-left-radius: 6px;
+  color: #4d494d;
+  padding-top: 5px;
+
+  padding-bottom: 5px;
+}
+
+.buttons > p {
+  text-align: center;
+  margin: 0px;
+  /* font-weight :bold; */
+}
+
+.buttons {
+  background-color: #bbb;
+}
+.fakeButtons {
+  height: 10px;
+  float: left;
+  width: 10px;
+  border-radius: 50%;
+  border: 1px solid #000;
+  position: relative;
+  left: 6px;
+  background-color: #ff3b47;
+  border-color: #9d252b;
+  display: inline-block;
+}
+
+.fakeMinimize {
+  left: 11px;
+  background-color: #ffc100;
+  border-color: #9d802c;
+}
+
+.fakeZoom {
+  left: 16px;
+  background-color: #00d742;
+  border-color: #049931;
+}
+
+.content {
+  background-color: #151515;
+  height: 200px;
+  margin: 0 auto;
+  padding: 20px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.col {
+  display: inline-block;
+}
+
+.col-4 {
+  width: 25%;
+}
+
+.col-8 {
+  width: 75%;
+}
+
+.tag {
+  color: var(--primary-red);
+  display: inline-block;
+  padding: 5px 10px;
+  border: 1px solid var(--primary-red);
+  border-radius: 5px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.tag:hover,
+.selected {
+  background-color: var(--primary-red);
+  color: white;
+}
+
+.footer {
+  padding: 10px;
+  border: 1px solid #d4d7dd;
+  background-color: #eae9e9;
+  color: #45454d;
+}
+
+.social-icon {
+  width: 24px;
+  height: 24px;
+  transition: all ease-in-out 0.6s;
+}
+
+.social-icon:hover {
+  transform: translateY(-5px);
+}
+
+@media (max-width: 860px) {
+  .page {
+    width: 65%;
+  }
+  .menu-bar {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}
+
+@media (max-width: 770px) {
+  .page {
+    width: 80%;
+  }
+}
+
+@media (max-width: 660px) {
+  .page {
+    width: 98%;
+  }
+  .menu-bar {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
