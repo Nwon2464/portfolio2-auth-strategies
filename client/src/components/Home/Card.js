@@ -29,21 +29,18 @@
 
 import React from "react";
 import "./CardList.css";
-const Card = ({ content,img, name, href, color, txt }) => {
+const Card = ({ content, img, name, href, color, txt }) => {
   const NAME = name.charAt(0).toUpperCase() + name.substring(1, name.length);
   return (
     <div class="card-container">
       <div class="card-container-container">
-        <div
-          class="card-container-container-card"
-          style={{ border: `1px solid ${color}` }}
-        >
+        <div class="card-container-container-card">
           <div class="circle" style={{ background: `${color}` }}>
             <img src={`${img}`} className="social-icons" alt="" />
             {/* <h2>{NAME}</h2> */}
           </div>
           <div class="content-paragraph">
-            <p style={{textAlign:"center",margin:"0 auto"}}>
+            <p style={{ textAlign: "center", margin: "0 auto" }}>
               {content}
               <a style={{ background: `${color}` }} href={href}>
                 {`${txt}`}

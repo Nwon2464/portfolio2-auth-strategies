@@ -74,9 +74,6 @@ nav button:focus span {
   border-radius: 2px;
 }
 
-.menu-container {
-  /* position: relative; */
-}
 .menu {
   position: fixed;
   visibility: hidden;
@@ -116,6 +113,8 @@ nav button:focus span {
 }
 
 header {
+  position: relative;
+  z-index: 1;
   margin-bottom: 5rem;
 }
 header .header-image {

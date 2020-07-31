@@ -113,7 +113,15 @@ button {
 
 .window {
   width: 80%;
-  
+  margin: 20px auto;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+.window.profile {
+  width: 70vw;
+  height: 90vh;
+  background-color: black;
   margin: 20px auto;
   border-radius: 6px;
   box-sizing: border-box;
@@ -128,13 +136,25 @@ button {
 
   padding-bottom: 5px;
 }
-
+.title-bar > p {
+  text-align: center;
+  font-size: 10px;
+}
 .buttons > p {
   text-align: center;
   margin: 0px;
   /* font-weight :bold; */
 }
 
+.All {
+  margin-top: 13px;
+  margin-left: 5%;
+}
+
+.AllButton {
+  background-color: white;
+  border: 1px solid #bbb;
+}
 .buttons {
   background-color: #bbb;
 }

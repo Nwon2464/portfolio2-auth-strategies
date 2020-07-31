@@ -4,6 +4,7 @@ const router = require("express").Router();
 
 //fetching from client
 router.get("/current_user", (req, res) => {
+  // res.send(req.user);
   res.send(req.user);
 });
 
@@ -21,7 +22,7 @@ router.get(
   })
 );
 router.get("/google/callback", passport.authenticate("google"), (req, res) => {
-  res.redirect("/auth");
+  res.redirect("/profile");
 });
 
 module.exports = router;
