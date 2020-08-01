@@ -46,6 +46,7 @@ app.use(
   })
 );
 app.use(express.json()); //Body parser for post request
+
 app.use("/api", apiRoutes);
 
 app.use("/posts", router);

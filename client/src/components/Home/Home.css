@@ -185,7 +185,7 @@ button {
 
 .content {
   background-color: #151515;
-  height: 200px;
+  /* height: 200px; */
   margin: 0 auto;
   padding: 20px;
   border-bottom-left-radius: 5px;

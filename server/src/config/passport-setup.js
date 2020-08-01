@@ -1,5 +1,9 @@
 const passport = require("passport");
 const GoogleStrategy = require("passport-google-oauth20");
+const FacebookStrategy = require("passport-facebook");
+const GithubStrategy = require("passport-github");
+const AmazonStrategy = require("passport-amazon");
+const InstagramStrategy = require("passport-instagram");
 const keys = require("./keys");
 const Users = require("../models/user");
 const chalk = require("chalk");
@@ -29,6 +33,65 @@ passport.use(
   )
 );
 
+passport.use(
+  new InstagramStrategy(
+    {
+      clientID: keys.instagram.clientId,
+      clientSecret: keys.instagram.clientSecret,
+      callbackURL: "/auth/instagram/callback",
+    },
+    (accessToken, refreshToken, profile, cb) => {
+      console.log(chalk.blue(JSON.stringify(profile)));
+      user = { ...profile };
+      return cb(null, profile);
+    }
+  )
+);
+
+passport.use(
+  new FacebookStrategy(
+    {
+      clientID: keys.facebook.clientId,
+      clientSecret: keys.facebook.clientSecret,
+      callbackURL: "http://localhost:5000/auth/facebook/callback",
+    },
+    (accessToken, refreshToken, profile, cb) => {
+      console.log(chalk.blue(JSON.stringify(profile)));
+      user = { ...profile };
+      return cb(null, profile);
+    }
+  )
+);
+
+passport.use(
+  new GithubStrategy(
+    {
+      clientID: keys.github.clientId,
+      clientSecret: keys.github.clientSecret,
+      callbackURL: "/auth/github/callback",
+    },
+    (accessToken, refreshToken, profile, cb) => {
+      console.log(chalk.blue(JSON.stringify(profile)));
+      user = { ...profile };
+      return cb(null, profile);
+    }
+  )
+);
+
+passport.use(
+  new AmazonStrategy(
+    {
+      clientID: keys.amazon.clientId,
+      clientSecret: keys.amazon.clientSecret,
+      callbackURL: "/auth/amazon/callback",
+    },
+    (accessToken, refreshToken, profile, cb) => {
+      console.log(chalk.blue(JSON.stringify(profile)));
+      user = { ...profile };
+      return cb(null, profile);
+    }
+  )
+);
 //sends a cookie to the browser
 
 // passport.serializeUser((user, done) => {

@@ -34,7 +34,6 @@ const Profile = (props) => {
 
         <Terminal verify={"checked"} userData={userData} selected={selected} />
 
-        {/* <div>asdfasfs</div> */}
       </div>
     );
   };
