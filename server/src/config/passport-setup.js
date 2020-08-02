@@ -3,6 +3,8 @@ const GoogleStrategy = require("passport-google-oauth20");
 const FacebookStrategy = require("passport-facebook");
 const GithubStrategy = require("passport-github");
 const AmazonStrategy = require("passport-amazon");
+const SpotifyStrategy = require("passport-spotify").Strategy;
+const twitchStrategy = require("passport-twitch.js").Strategy;
 const InstagramStrategy = require("passport-instagram");
 const keys = require("./keys");
 const Users = require("../models/user");
@@ -17,6 +19,36 @@ passport.serializeUser((user, cb) => {
 passport.deserializeUser((user, cb) => {
   cb(null, user);
 });
+
+passport.use(
+  new SpotifyStrategy(
+    {
+      clientID: keys.spotify.clientId,
+      clientSecret: keys.spotify.clientSecret,
+      callbackURL: "/auth/spotify/callback",
+    },
+    (accessToken, refreshToken, profile, cb) => {
+      console.log(chalk.blue(JSON.stringify(profile)));
+      user = { ...profile };
+      return cb(null, profile);
+    }
+  )
+);
+
+passport.use(
+  new twitchStrategy(
+    {
+      clientID: keys.twitch.clientId,
+      clientSecret: keys.twitch.clientSecret,
+      callbackURL: "/auth/twitch/callback",
+    },
+    (accessToken, refreshToken, profile, cb) => {
+      // console.log(chalk.blue(JSON.stringify(profile)));
+      user = { ...profile };
+      return cb(null, profile);
+    }
+  )
+);
 
 passport.use(
   new GoogleStrategy(
@@ -53,7 +85,7 @@ passport.use(
     {
       clientID: keys.facebook.clientId,
       clientSecret: keys.facebook.clientSecret,
-      callbackURL: "http://localhost:5000/auth/facebook/callback",
+      callbackURL: "/auth/facebook/callback",
     },
     (accessToken, refreshToken, profile, cb) => {
       console.log(chalk.blue(JSON.stringify(profile)));

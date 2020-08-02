@@ -1,35 +1,3 @@
-// import React from "react";
-// import { connect } from "react-redux";
-// import { fetchUser } from "../../ReduxActions";
-// import requireAuth from "../../HOC/requireAuth";
-
-// class Auth extends React.Component {
-//   //   componentDidMount() {
-//   //     this.props.fetchUser();
-//   //   }
-
-//   //   renderContent = () => {
-//   //     if (!this.props.auth) {
-//   //       return <div>loading..</div>;
-//   //     } else {
-//   //       return <div>Welcome this is Auth Page</div>;
-//   //     }
-//   //   };
-//   render() {
-//     return (
-//       <div>
-//         {/* {this.renderContent()} */}
-//         Post a comment!
-//       </div>
-//     );
-//   }
-// }
-// // const mapStatetoProps = (state) => {
-// //   return {
-// //     auth: state.auth,
-// //   };
-// // };
-// export default requireAuth(Auth);
 import React from "react";
 import { connect } from "react-redux";
 import { fetchUser } from "../../ReduxActions";

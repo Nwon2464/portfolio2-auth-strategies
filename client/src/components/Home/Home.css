@@ -72,24 +72,6 @@ button {
   border-radius: 50%;
 }
 
-/* .card {
-  background: white;
-  border-radius: 2px;
-  display: inline-block;
-  margin-right: 2em;
-  margin-bottom:20px;
-  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
-  transition: all ease-in-out 0.6s;
-} */
-/* .cardList {
-  margin-right: 10px;
-  text-align: center;
-  padding: 5px 0px 5px 10px;
-}
-
-.card:hover {
-  transform: translateY(-20px);
-} */
 .page {
   text-align: center;
 
@@ -121,7 +103,7 @@ button {
 .window.profile {
   width: 70vw;
   height: 90vh;
-  background-color: black;
+  background-color: #151515;
   margin: 20px auto;
   border-radius: 6px;
   box-sizing: border-box;
@@ -147,7 +129,7 @@ button {
 }
 
 .All {
-  margin-top: 13px;
+  margin-bottom: 150px;
   margin-left: 5%;
 }
 
@@ -190,41 +172,6 @@ button {
   padding: 20px;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
-}
-
-.col {
-  display: inline-block;
-}
-
-.col-4 {
-  width: 25%;
-}
-
-.col-8 {
-  width: 75%;
-}
-
-.tag {
-  color: var(--primary-red);
-  display: inline-block;
-  padding: 5px 10px;
-  border: 1px solid var(--primary-red);
-  border-radius: 5px;
-  margin-right: 10px;
-  margin-bottom: 10px;
-}
-
-.tag:hover,
-.selected {
-  background-color: var(--primary-red);
-  color: white;
-}
-
-.footer {
-  padding: 10px;
-  border: 1px solid #d4d7dd;
-  background-color: #eae9e9;
-  color: #45454d;
 }
 
 .social-icon {
