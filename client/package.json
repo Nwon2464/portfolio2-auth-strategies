@@ -20,7 +20,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "npm run clean && webpack",
+    "clean": "rimraf dist",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -38,5 +39,20 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/preset-es2016": "^7.0.0-beta.53",
+    "babel-core": "^6.17.0",
+    "babel-loader": "^6.2.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-preset-env": "^1.1.4",
+    "babel-preset-react": "^6.16.0",
+    "css-loader": "^0.26.1",
+    "html-webpack-plugin": "^2.24.1",
+    "image-webpack-loader": "^6.0.0",
+    "rimraf": "^3.0.2",
+    "style-loader": "^0.13.1",
+    "url-loader": "^4.1.0",
+    "webpack": "^2.2.0-rc.0"
   }
 }

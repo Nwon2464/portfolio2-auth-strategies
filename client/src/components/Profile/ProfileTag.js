@@ -3,7 +3,7 @@ import React from "react";
 const ProfileTag = ({ verifyData, onClick, selected }) => {
   const allData = ["All", ...verifyData];
   return (
-    <>
+    <React.Fragment>
       {allData.map((data, index) => {
         return (
           <div
@@ -27,7 +27,7 @@ const ProfileTag = ({ verifyData, onClick, selected }) => {
           </div>
         );
       })}
-    </>
+    </React.Fragment>
   );
 };
 

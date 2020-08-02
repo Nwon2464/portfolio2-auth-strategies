@@ -40,7 +40,7 @@ const Profile = (props) => {
       case false:
         props.history.push("/");
       default:
-        return <>{renderProfile()}</>;
+        return <React.Fragment>{renderProfile()}</React.Fragment>;
     }
   };
 
