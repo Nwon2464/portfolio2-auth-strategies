@@ -56,13 +56,13 @@ app.use("/posts", router);
 app.use("/auth", authRoutes);
 
 if (process.env.NODE_ENV !== "production") {
-  console.log("AA");
+  console.log("Development ------------------");
   const webpackMiddleware = require("webpack-dev-middleware");
   const webpack = require("webpack");
   const webpackConfig = require("./webpack.config");
   app.use(webpackMiddleware(webpack(webpackConfig)));
 } else {
-  console.log("BB");
+  console.log("Production -----------------");
 
   app.use(express.static("dist"));
   app.get("*", (req, res) => {

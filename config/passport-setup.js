@@ -35,95 +35,96 @@ passport.use(
   )
 );
 
-passport.use(
-  new twitchStrategy(
-    {
-      clientID: keys.twitch.clientId,
-      clientSecret: keys.twitch.clientSecret,
-      callbackURL: "/auth/twitch/callback",
-    },
-    (accessToken, refreshToken, profile, cb) => {
-      // console.log(chalk.blue(JSON.stringify(profile)));
-      user = { ...profile };
-      return cb(null, profile);
-    }
-  )
-);
+// passport.use(
+//   new twitchStrategy(
+//     {
+//       clientID: keys.twitch.clientId,
+//       clientSecret: keys.twitch.clientSecret,
+//       callbackURL: "/auth/twitch/callback",
+//     },
+//     (accessToken, refreshToken, profile, cb) => {
+//       // console.log(chalk.blue(JSON.stringify(profile)));
+//       user = { ...profile };
+//       return cb(null, profile);
+//     }
+//   )
+// );
 
-passport.use(
-  new GoogleStrategy(
-    {
-      clientID: keys.google.clientId,
-      clientSecret: keys.google.clientSecret,
-      callbackURL: "/auth/google/callback",
-    },
-    (accessToken, refreshToken, profile, cb) => {
-      console.log(chalk.blue(JSON.stringify(profile)));
-      user = { ...profile };
-      return cb(null, profile);
-    }
-  )
-);
+// passport.use(
+//   new GoogleStrategy(
+//     {
+//       clientID: keys.google.clientId,
+//       clientSecret: keys.google.clientSecret,
+//       callbackURL: "/auth/google/callback",
+//     },
+//     (accessToken, refreshToken, profile, cb) => {
+//       console.log(chalk.blue(JSON.stringify(profile)));
+//       user = { ...profile };
+//       return cb(null, profile);
+//     }
+//   )
+// );
 
-passport.use(
-  new InstagramStrategy(
-    {
-      clientID: keys.instagram.clientId,
-      clientSecret: keys.instagram.clientSecret,
-      callbackURL: "/auth/instagram/callback",
-    },
-    (accessToken, refreshToken, profile, cb) => {
-      console.log(chalk.blue(JSON.stringify(profile)));
-      user = { ...profile };
-      return cb(null, profile);
-    }
-  )
-);
+// passport.use(
+//   new InstagramStrategy(
+//     {
+//       clientID: keys.instagram.clientId,
+//       clientSecret: keys.instagram.clientSecret,
+//       callbackURL: "/auth/instagram/callback",
+//     },
+//     (accessToken, refreshToken, profile, cb) => {
+//       console.log(chalk.blue(JSON.stringify(profile)));
+//       user = { ...profile };
+//       return cb(null, profile);
+//     }
+//   )
+// );
 
-passport.use(
-  new FacebookStrategy(
-    {
-      clientID: keys.facebook.clientId,
-      clientSecret: keys.facebook.clientSecret,
-      callbackURL: "/auth/facebook/callback",
-    },
-    (accessToken, refreshToken, profile, cb) => {
-      console.log(chalk.blue(JSON.stringify(profile)));
-      user = { ...profile };
-      return cb(null, profile);
-    }
-  )
-);
+// passport.use(
+//   new FacebookStrategy(
+//     {
+//       clientID: keys.facebook.clientId,
+//       clientSecret: keys.facebook.clientSecret,
+//       callbackURL: "/auth/facebook/callback",
+//     },
+//     (accessToken, refreshToken, profile, cb) => {
+//       console.log(chalk.blue(JSON.stringify(profile)));
+//       user = { ...profile };
+//       return cb(null, profile);
+//     }
+//   )
+// );
 
-passport.use(
-  new GithubStrategy(
-    {
-      clientID: keys.github.clientId,
-      clientSecret: keys.github.clientSecret,
-      callbackURL: "/auth/github/callback",
-    },
-    (accessToken, refreshToken, profile, cb) => {
-      console.log(chalk.blue(JSON.stringify(profile)));
-      user = { ...profile };
-      return cb(null, profile);
-    }
-  )
-);
+// passport.use(
+//   new GithubStrategy(
+//     {
+//       clientID: keys.github.clientId,
+//       clientSecret: keys.github.clientSecret,
+//       callbackURL: "/auth/github/callback",
+//     },
+//     (accessToken, refreshToken, profile, cb) => {
+//       console.log(chalk.blue(JSON.stringify(profile)));
+//       user = { ...profile };
+//       return cb(null, profile);
+//     }
+//   )
+// );
 
-passport.use(
-  new AmazonStrategy(
-    {
-      clientID: keys.amazon.clientId,
-      clientSecret: keys.amazon.clientSecret,
-      callbackURL: "/auth/amazon/callback",
-    },
-    (accessToken, refreshToken, profile, cb) => {
-      console.log(chalk.blue(JSON.stringify(profile)));
-      user = { ...profile };
-      return cb(null, profile);
-    }
-  )
-);
+// passport.use(
+//   new AmazonStrategy(
+//     {
+//       clientID: keys.amazon.clientId,
+//       clientSecret: keys.amazon.clientSecret,
+//       callbackURL: "/auth/amazon/callback",
+//     },
+//     (accessToken, refreshToken, profile, cb) => {
+//       console.log(chalk.blue(JSON.stringify(profile)));
+//       user = { ...profile };
+//       return cb(null, profile);
+//     }
+//   )
+// );
+
 //sends a cookie to the browser
 
 // passport.serializeUser((user, done) => {
