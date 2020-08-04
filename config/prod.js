@@ -1,36 +1,34 @@
 module.exports = {
   google: {
-    clientId:
-      "219815912128-bldp409j72pld6pcbmrqaj8e9c8lgfsc.apps.googleusercontent.com",
-    clientSecret: "-W-Gd6l8waXGVncTMe3Kc0ie",
+    clientId: process.env.GOOGLE_CLIENT_ID,
+    clientSecret: process.env.GOOGLE_CLIENT_SECRET,
   },
 
   session: {
     cookieKey: "abcdefg",
   },
   facebook: {
-    clientId: "719812728589947",
-    clientSecret: "74d1c59a40e3f937b99dec5e4825eed4",
+    clientId: process.env.FACEBOOK_CLIENT_ID,
+    clientSecret: process.env.FACEBOOK_CLIENT_SECRET,
   },
   spotify: {
     clientId: process.env.SPOTIFY_CLIENT_ID,
     clientSecret: process.env.SPOTIFY_CLIENT_SECRET,
   },
   twitch: {
-    clientId: "6g0e69w46upnufsnxjvdarcxxsoiaj",
-    clientSecret: "2zaza37zqzn9wmpuqzulyhflrxibc3",
+    clientId: process.env.TWITCH_CLIENT_ID,
+    clientSecret: process.env.TWITCH_CLIENT_SECRET,
   },
   github: {
-    clientId: "4d1c1693eb43feb51bbc",
-    clientSecret: "a8d5fb159f1c555ff09bcbb04ecc05ac6bc7f44c",
+    clientId: process.env.GITHUB_CLIENT_ID,
+    clientSecret: process.env.GITHUB_CLIENT_SECRET,
   },
   amazon: {
-    clientId: "amzn1.application-oa2-client.ad1065bd0e5e4ab091cdfbcf5e0688f0",
-    clientSecret:
-      "9e0a5809ee6ab2e36546c4f9b5605c7eeea72a650496a54ec438dfb6358a1b27",
+    clientId: process.env.AMAZON_CLIENT_ID,
+    clientSecret: process.env.AMAZON_CLIENT_SECRET,
   },
   instagram: {
-    clientId: "750788502400787",
-    clientSecret: "789e07d31c3a523d3bef8abe16f1e187",
+    clientId: process.env.INSTAGRAM_CLIENT_ID,
+    clientSecret: process.env.INSTAGRAM_CLIENT_SECRET,
   },
 };
