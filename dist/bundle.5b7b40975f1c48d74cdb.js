@@ -5173,8 +5173,8 @@ var LandingMain = function LandingMain(props) {
     var b = _IconData.data.filter(function (datas) {
       return datas.name === props.auth.provider;
     });
-    if (!b[0].name) {
-      return null;
+    if (!b[0]) {
+      return;
     }
     return b[0].img;
   };
