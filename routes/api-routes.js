@@ -1,5 +1,5 @@
-//Not going to use this part
-const stripe = require("stripe");
+// Not going to use this part
+// const stripe = require("stripe");
 const router = require("express").Router();
 router.get("/current_user", (req, res) => {
   console.log("????");
