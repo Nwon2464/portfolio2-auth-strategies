@@ -25,7 +25,7 @@ passport.use(
     {
       clientID: keys.spotify.clientId,
       clientSecret: keys.spotify.clientSecret,
-      callbackURL: "/auth/spotify/callback",
+      callbackURL: "https://serene-sands-56255.herokuapp.com/auth/spotify/callback",
     },
     (accessToken, refreshToken, profile, cb) => {
       console.log(chalk.blue(JSON.stringify(profile)));
