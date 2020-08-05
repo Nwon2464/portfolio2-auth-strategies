@@ -1,88 +1,50 @@
-.card-container {
-  /* display: flex; */
-  margin: 0 15%;
-  justify-content: center;
-  align-items: center;
-
-  background-attachment: fixed;
-}
-
-.card-container-container {
-  width: 10%;
-  padding: 20px;
-  float: left;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.card-container-container .card-container-container-card {
+.grid-card {
   position: relative;
   width: 250px;
-  height: 320px;
+  height: 300px;
   background: #fff;
   margin: 20px;
-  border-radius: 20px;
+  border-radius: 15px;
   overflow: hidden;
   box-shadow: 0 15px 25px rgb(0, 0, 0, 0.2);
   transition: 0.5s;
 }
-
-.card-container-container .card-container-container-card .circle {
+.grid-card .grid-circle {
   position: relative;
   width: 100%;
-  height: 110%;
-  margin-top: -20px;
+  height: 100%;
   background: #000;
-  clip-path: circle(200px at center 0);
+  clip-path: circle(180px at center 0);
 }
-.card-container-container .card-container-container-card .circle h2 {
-  color: #fff;
-  font-size: 4.5em;
-  padding: 40px 0;
-  text-align: center;
-}
-.card-container-container .card-container-container-card .content-paragraph {
+
+.grid-card .grid-content {
   position: absolute;
   bottom: 10px;
   page-break-after: 20px;
   text-align: center;
 }
 
-.card-container-container .card-container-container-card .content-paragraph p {
-  color: #666;
-  font-size: 10px;
+.grid-card .grid-content p {
+  text-align: center;
+  margin: 0 auto;
+  font-size: 1.3rem;
 }
-.card-container-container .card-container-container-card .content-paragraph a {
+
+.grid-card .grid-content a {
   position: relative;
   display: inline-block;
   padding: 10px 20px;
   background: #000;
+  font-size: 13px;
   color: #fff;
   border-radius: 40px;
   text-decoration: none;
   margin-top: 20px;
-  font-size: 12px;
 }
 
-.card-container-container:hover .card-container-container-card {
-  /* filter: blur(1px); */
-  transform: scale(0.9);
-  opacity: 0.5;
-}
-.card-container-container .card-container-container-card:hover {
-  /* filter: blur(0px); */
-  transform: scale(1.1);
-  opacity: 1;
-  z-index: 999;
-}
-.card-container-container .card-container-container-card:hover::after {
-  content: "Try it!";
-}
-.social-icons {
-  width: 70px;
-  margin-top: 70px;
-  /* align-items: center; */
-  margin-left: 36%;
-  /* margin-left: 43%; */
+.grid-img {
+  position: absolute;
+  width: 25%;
+  bottom: 70%;
+  margin-left: 35%;
 }

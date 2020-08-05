@@ -24,8 +24,7 @@ passport.use(
     {
       clientID: keys.spotify.clientId,
       clientSecret: keys.spotify.clientSecret,
-      callbackURL:
-        "https://serene-sands-56255.herokuapp.com/auth/spotify/callback",
+      callbackURL: keys.spotify.callbackURL,
     },
     (accessToken, refreshToken, profile, cb) => {
       console.log(chalk.blue(JSON.stringify(profile)));
@@ -40,8 +39,7 @@ passport.use(
     {
       clientID: keys.twitch.clientId,
       clientSecret: keys.twitch.clientSecret,
-      callbackURL:
-        "https://serene-sands-56255.herokuapp.com/auth/twitch/callback",
+      callbackURL: keys.twitch.callbackURL,
     },
     (accessToken, refreshToken, profile, cb) => {
       console.log(chalk.blue(JSON.stringify(profile)));
@@ -56,8 +54,7 @@ passport.use(
     {
       clientID: keys.google.clientId,
       clientSecret: keys.google.clientSecret,
-      callbackURL:
-        "https://serene-sands-56255.herokuapp.com/auth/google/callback",
+      callbackURL: keys.google.callbackURL,
     },
     (accessToken, refreshToken, profile, cb) => {
       console.log(chalk.blue(JSON.stringify(profile)));
@@ -72,8 +69,7 @@ passport.use(
     {
       clientID: keys.instagram.clientId,
       clientSecret: keys.instagram.clientSecret,
-      callbackURL:
-        "https://serene-sands-56255.herokuapp.com/auth/instagram/callback",
+      callbackURL: keys.instagram.callbackURL,
     },
     (accessToken, refreshToken, profile, cb) => {
       console.log(chalk.blue(JSON.stringify(profile)));
@@ -88,8 +84,7 @@ passport.use(
     {
       clientID: keys.facebook.clientId,
       clientSecret: keys.facebook.clientSecret,
-      callbackURL:
-        "https://serene-sands-56255.herokuapp.com/auth/facebook/callback",
+      callbackURL: keys.facebook.callbackURL,
     },
     (accessToken, refreshToken, profile, cb) => {
       console.log(chalk.blue(JSON.stringify(profile)));
@@ -104,8 +99,7 @@ passport.use(
     {
       clientID: keys.github.clientId,
       clientSecret: keys.github.clientSecret,
-      callbackURL:
-        "https://serene-sands-56255.herokuapp.com/auth/github/callback",
+      callbackURL: keys.github.callbackURL,
     },
     (accessToken, refreshToken, profile, cb) => {
       console.log(chalk.blue(JSON.stringify(profile)));
@@ -120,8 +114,7 @@ passport.use(
     {
       clientID: keys.amazon.clientId,
       clientSecret: keys.amazon.clientSecret,
-      callbackURL:
-        "https://serene-sands-56255.herokuapp.com/auth/amazon/callback",
+      callbackURL: keys.amazon.callbackURL,
     },
     (accessToken, refreshToken, profile, cb) => {
       console.log(chalk.blue(JSON.stringify(profile)));

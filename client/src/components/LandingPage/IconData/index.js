@@ -63,7 +63,7 @@ export const data = [
     color: "#d9317a",
     txt: "Login with Instagram",
     content:
-      "Create an account or log in to Instagram - A simple, fun & creative way to capture, edit & share photos, videos & messages with friends & family.",
+      "Create an account or log in to Instagram - A simple, fun & creative way to capture, share photos, videos with friends.",
   },
   {
     img: SpotifyIcon,

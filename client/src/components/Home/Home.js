@@ -20,8 +20,7 @@ class Home extends React.Component {
             Facebook, Instagram, and Google.
           </p>
           <Terminal
-            userData={`Back end - MongoDB, Front end - React and Redux
-        `}
+            userData={`Back end - Node express, Front end - React and Redux`}
             selected="All"
           />
           <p style={{ fontSize: 35, paddingBottom: "10px" }}>
@@ -29,8 +28,11 @@ class Home extends React.Component {
           </p>
           <div style={{ marginBottom: 20 }} />
         </div>
-
-        <CardList />
+        <div className="grid">
+          <div className="grid-container">
+            <CardList />
+          </div>
+        </div>
       </div>
     );
   };
