@@ -174,32 +174,6 @@ button {
   border-bottom-right-radius: 5px;
 }
 
-@media (max-width: 860px) {
-  .page {
-    width: 65%;
-  }
-  .menu-bar {
-    padding-left: 5%;
-    padding-right: 5%;
-  }
-}
-
-@media (max-width: 770px) {
-  .page {
-    width: 80%;
-  }
-}
-
-@media (max-width: 660px) {
-  .page {
-    width: 98%;
-  }
-  .menu-bar {
-    padding-left: 0;
-    padding-right: 0;
-  }
-}
-
 .grid {
   display: flex;
   justify-content: center;
