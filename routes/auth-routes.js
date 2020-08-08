@@ -75,7 +75,13 @@ router.get(
   }
 );
 
-router.get("/instagram", passport.authenticate("instagram"));
+router.get(
+  "/instagram",
+  passport.authenticate("instagram", {
+    scope: ["user_media"],
+    response_type: "code",
+  })
+);
 router.get(
   "/instagram/callback",
   passport.authenticate("instagram"),
