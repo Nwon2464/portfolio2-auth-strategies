@@ -108,11 +108,6 @@ button {
   border-radius: 6px;
   box-sizing: border-box;
 }
-@media only screen and (max-width: 400px) {
-  .window.profile {
-    width: 95%;
-  }
-}
 
 .title-bar {
   background-color: #ececec;
@@ -127,12 +122,6 @@ button {
   text-align: center;
   font-size: 10px;
 }
-
-@media only screen and (max-width: 400px) {
-  .title-bar > p {
-    margin-left: 50px;
-  }
-}
 .buttons > p {
   text-align: center;
   margin: 0px;
@@ -142,14 +131,6 @@ button {
 .All {
   margin-bottom: 150px;
   margin-left: 5%;
-}
-
-@media only screen and (max-width: 433px) {
-  .All {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
-    grid-auto-rows: 65px;
-  }
 }
 
 .AllButton {
