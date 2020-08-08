@@ -31,7 +31,7 @@ router.get(
   "/twitch",
   passport.authenticate("twitch.js", {
     response_type: "ABC",
-    scope: "user:read:email analytics:read:games",
+    scope: "user:read:email",
   })
 );
 router.get(
