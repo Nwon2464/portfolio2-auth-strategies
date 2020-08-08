@@ -108,12 +108,6 @@ button {
   border-radius: 6px;
   box-sizing: border-box;
 }
-@media only screen and (max-width: 400px) {
-  .window.profile {
-    /* width: 95%; */
-  }
-}
-
 .title-bar {
   background-color: #ececec;
   border-top-right-radius: 6px;
@@ -143,9 +137,35 @@ button {
 }
 @media only screen and (max-width: 1200px) {
   .needtobeFlexd {
-    display: block;
+    display: grid !important;
+    grid-template-rows: 100px;
   }
 }
+
+@media only screen and (max-width: 940px) {
+  .needtobeFlexd {
+    grid-template-rows: 150px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .needtobeFlexd {
+    grid-template-rows: 220px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .needtobeFlexd {
+    grid-template-rows: 280px;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .needtobeFlexd {
+    grid-template-rows: 550px;
+  }
+}
+
 @media only screen and (max-width: 1200px) {
   .All {
     display: grid;
