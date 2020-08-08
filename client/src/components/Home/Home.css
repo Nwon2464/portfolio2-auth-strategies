@@ -136,14 +136,13 @@ button {
   display: flex;
 }
 
-
 @media only screen and (max-width: 1200px) {
   .All {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     grid-auto-rows: 65px;
     grid-gap: 5px;
-    margin:0 1.5px;
+    margin: 0 1.5px;
   }
 }
 @media only screen and (max-width: 1200px) {
@@ -166,7 +165,7 @@ button {
 }
 @media only screen and (max-width: 450px) {
   .needtobeFlexd {
-    grid-template-rows: 410px;
+    grid-template-rows: 280px;
   }
 }
 
