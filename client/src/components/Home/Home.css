@@ -159,6 +159,11 @@ button {
   }
 }
 
+@media only screen and (max-width: 400px) {
+  .needtobeFlexd {
+    grid-template-rows: 450px;
+  }
+}
 
 @media only screen and (max-width: 390px) {
   .needtobeFlexd {
