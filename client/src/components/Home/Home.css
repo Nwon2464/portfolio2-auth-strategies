@@ -108,6 +108,11 @@ button {
   border-radius: 6px;
   box-sizing: border-box;
 }
+@media only screen and (max-width: 400px) {
+  .window.profile {
+    /* width: 95%; */
+  }
+}
 
 .title-bar {
   background-color: #ececec;
@@ -133,6 +138,33 @@ button {
   margin-left: 5%;
 }
 
+.needtobeFlexd {
+  display: flex;
+}
+@media only screen and (max-width: 1200px) {
+  .needtobeFlexd {
+    display: block;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .All {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+    grid-auto-rows: 65px;
+    grid-gap: 5px;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  header {
+    margin-bottom: 0;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .AllButton {
+    width: 100%;
+  }
+}
 .AllButton {
   background-color: white;
   border: 1px solid #bbb;
