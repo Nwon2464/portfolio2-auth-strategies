@@ -19,7 +19,6 @@ const ProfileTag = ({ verifyData, onClick, selected }) => {
                 cursor: "pointer",
                 padding: 15,
                 margin: "10px 0",
-                fontSize: 20,
               }}
             >
               {data}
