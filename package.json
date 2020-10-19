@@ -6,7 +6,8 @@
   "scripts": {
     "clean": "rimraf dist",
     "build": "npm run clean && webpack",
-    "serve": "webpack-dev-server"
+    "serve": "webpack-dev-server",
+    "dev": "node index.js"
   },
   "repository": {
     "type": "git",
