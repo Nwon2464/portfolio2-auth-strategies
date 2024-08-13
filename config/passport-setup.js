@@ -25,7 +25,7 @@ passport.use(
       clientID: keys.spotify.clientId,
       clientSecret: keys.spotify.clientSecret,
       callbackURL:
-        "https://serene-sands-56255.herokuapp.com/auth/spotify/callback",
+        "https://portfolio2-auth-strategies-eight.vercel.app/auth/spotify/callback",
     },
     (accessToken, refreshToken, profile, cb) => {
       console.log(chalk.blue(JSON.stringify(profile)));
@@ -41,7 +41,7 @@ passport.use(
       clientID: keys.twitch.clientId,
       clientSecret: keys.twitch.clientSecret,
       callbackURL:
-        "https://serene-sands-56255.herokuapp.com/auth/twitch/callback",
+        "https://portfolio2-auth-strategies-eight.vercel.app/auth/twitch/callback",
     },
     (accessToken, refreshToken, profile, cb) => {
       console.log(chalk.blue(JSON.stringify(profile)));
@@ -56,8 +56,7 @@ passport.use(
     {
       clientID: keys.google.clientId,
       clientSecret: keys.google.clientSecret,
-      callbackURL:
-        "https://serene-sands-56255.herokuapp.com/auth/google/callback",
+      callbackURL: "https://portfolio2-auth-strategies-eight.vercel.app/auth/google/callback",
     },
     (accessToken, refreshToken, profile, cb) => {
       console.log(chalk.blue(JSON.stringify(profile)));
@@ -67,37 +66,37 @@ passport.use(
   )
 );
 
-passport.use(
-  new InstagramStrategy(
-    {
-      clientID: keys.instagram.clientId,
-      clientSecret: keys.instagram.clientSecret,
-      callbackURL:
-        "https://serene-sands-56255.herokuapp.com/auth/instagram/callback",
-    },
-    (accessToken, refreshToken, profile, cb) => {
-      console.log(chalk.blue(JSON.stringify(profile)));
-      user = { ...profile };
-      return cb(null, profile);
-    }
-  )
-);
+// passport.use(
+//   new InstagramStrategy(
+//     {
+//       clientID: keys.instagram.clientId,
+//       clientSecret: keys.instagram.clientSecret,
+//       callbackURL:
+//         "https://serene-sands-56255.herokuapp.com/auth/instagram/callback",
+//     },
+//     (accessToken, refreshToken, profile, cb) => {
+//       console.log(chalk.blue(JSON.stringify(profile)));
+//       user = { ...profile };
+//       return cb(null, profile);
+//     }
+//   )
+// );
 
-passport.use(
-  new FacebookStrategy(
-    {
-      clientID: keys.facebook.clientId,
-      clientSecret: keys.facebook.clientSecret,
-      callbackURL:
-        "https://serene-sands-56255.herokuapp.com/auth/facebook/callback",
-    },
-    (accessToken, refreshToken, profile, cb) => {
-      console.log(chalk.blue(JSON.stringify(profile)));
-      user = { ...profile };
-      return cb(null, profile);
-    }
-  )
-);
+// passport.use(
+//   new FacebookStrategy(
+//     {
+//       clientID: keys.facebook.clientId,
+//       clientSecret: keys.facebook.clientSecret,
+//       callbackURL:
+//         "/auth/facebook/callback",
+//     },
+//     (accessToken, refreshToken, profile, cb) => {
+//       console.log(chalk.blue(JSON.stringify(profile)));
+//       user = { ...profile };
+//       return cb(null, profile);
+//     }
+//   )
+// );
 
 passport.use(
   new GithubStrategy(
@@ -105,7 +104,7 @@ passport.use(
       clientID: keys.github.clientId,
       clientSecret: keys.github.clientSecret,
       callbackURL:
-        "https://serene-sands-56255.herokuapp.com/auth/github/callback",
+        "https://portfolio2-auth-strategies-eight.vercel.app/auth/github/callback",
     },
     (accessToken, refreshToken, profile, cb) => {
       console.log(chalk.blue(JSON.stringify(profile)));
@@ -121,7 +120,7 @@ passport.use(
       clientID: keys.amazon.clientId,
       clientSecret: keys.amazon.clientSecret,
       callbackURL:
-        "https://serene-sands-56255.herokuapp.com/auth/amazon/callback",
+        "https://portfolio2-auth-strategies-eight.vercel.app/auth/amazon/callback",
     },
     (accessToken, refreshToken, profile, cb) => {
       console.log(chalk.blue(JSON.stringify(profile)));

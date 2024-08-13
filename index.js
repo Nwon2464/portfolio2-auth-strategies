@@ -1,4 +1,5 @@
 require("@babel/polyfill");
+require("dotenv").config();
 const express = require("express");
 const path = require("path");
 
@@ -12,7 +13,7 @@ const authRoutes = require("./routes/auth-routes");
 const apiRoutes = require("./routes/api-routes.js");
 
 const cookieSession = require("cookie-session");
-require("dotenv").config();
+
 
 const middleware = require("./middleware");
 const router = require("./routes");
