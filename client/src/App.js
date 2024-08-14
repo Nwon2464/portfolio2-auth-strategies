@@ -12,12 +12,13 @@ class App extends React.Component {
     this.props.fetchUser();
   }
   render() {
-    // console.log(this.props);
+    console.log(this.props);
     return (
       <div>
         <LandingMain />
-        <Route path="/" exact component={Home} />
-        <Route path="/profile" exact component={Profile} />
+        {this.props.auth ?<Profile {...this.props}/> : <Home/>}
+        {/* <Route path="/" exact component={Home} />
+        <Route path="/profile" exact component={Profile} /> */}
       </div>
     );
   }

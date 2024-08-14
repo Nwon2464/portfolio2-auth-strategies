@@ -29,7 +29,7 @@ class Home extends React.Component {
           <div style={{ marginBottom: 20 }} />
         </div>
         <div className="grid">
-          <div className="grid-container">
+          <div className="grid-container" style={{"margin-bottom":"50rem"}}>
             <CardList />
           </div>
         </div>
