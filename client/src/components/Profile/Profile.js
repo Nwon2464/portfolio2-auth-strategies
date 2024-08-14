@@ -7,8 +7,9 @@ import ProfileTag from "./ProfileTag";
 import Terminal from "../Home/Terminal";
 const Profile = (props) => {
   const [selected, setSelected] = useState("All");
- 
-  console.log(props,"??????");
+  useEffect(() => {
+    props.fetchUser();
+  }, []);
   const renderProfile = () => {
     const userData = props.auth;
     // console.log(userData);
@@ -33,7 +34,14 @@ const Profile = (props) => {
     );
   };
   const renderContent = () => {
+    switch (props.auth) {
+      case null:
+        return;
+      case false:
+        props.history.push("/");
+      default:
         return <React.Fragment>{renderProfile()}</React.Fragment>;
+    }
   };
 
   return <div>{renderContent()}</div>;
