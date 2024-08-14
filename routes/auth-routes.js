@@ -24,7 +24,7 @@ router.get(
   passport.authenticate("spotify"),
   (req, res) => {
     console.log("ih");
-    res.redirect("/profile");
+    res.redirect("/");
   }
 );
 router.get(
@@ -39,7 +39,7 @@ router.get(
   passport.authenticate("twitch.js"),
   (req, res) => {
     console.log("ih");
-    res.redirect("/profile");
+    res.redirect("/");
   }
 );
 
@@ -50,7 +50,7 @@ router.get(
   })
 );
 router.get("/amazon/callback", passport.authenticate("amazon"), (req, res) => {
-  res.redirect("/profile");
+  res.redirect("/");
 });
 //http://127.0.0.1:5000/
 //auth with google
@@ -61,7 +61,7 @@ router.get(
   })
 );
 router.get("/google/callback", passport.authenticate("google"), (req, res) => {
-  res.redirect("/profile");
+  res.redirect("/");
 });
 
 //auth with Facebook
@@ -71,7 +71,7 @@ router.get(
   passport.authenticate("facebook"),
   (req, res) => {
     console.log("ih");
-    res.redirect("/profile");
+    res.redirect("/");
   }
 );
 
@@ -87,7 +87,7 @@ router.get(
   passport.authenticate("instagram"),
   (req, res) => {
     console.log("ih");
-    res.redirect("/profile");
+    res.redirect("/");
   }
 );
 
@@ -99,6 +99,6 @@ router.get(
 );
 router.get("/github/callback", passport.authenticate("github"), (req, res) => {
   console.log("ih");
-  res.redirect("/profile");
+  res.redirect("/");
 });
 module.exports = router;

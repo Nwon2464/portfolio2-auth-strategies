@@ -7,17 +7,12 @@ import ProfileTag from "./ProfileTag";
 import Terminal from "../Home/Terminal";
 const Profile = (props) => {
   const [selected, setSelected] = useState("All");
-  useEffect(() => {
-    props.fetchUser();
-  }, []);
+
   const renderProfile = () => {
     const userData = props.auth;
-    // console.log(userData);
     const verifyData = Object.keys(userData).filter((key) => {
       return userData[key] !== null;
     });
-
-    // console.log(verifyData);
     return (
       <div className="needtobeFlexd" style={{ display: "flex" }}>
         <div className="All">
@@ -34,14 +29,7 @@ const Profile = (props) => {
     );
   };
   const renderContent = () => {
-    switch (props.auth) {
-      case null:
-        return;
-      case false:
-        props.history.push("/");
-      default:
-        return <React.Fragment>{renderProfile()}</React.Fragment>;
-    }
+      return <React.Fragment>{renderProfile()}</React.Fragment>;
   };
 
   return <div>{renderContent()}</div>;

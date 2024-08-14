@@ -1,4 +1,6 @@
 require("@babel/polyfill");
+require("dotenv").config();
+
 const express = require("express");
 const path = require("path");
 
@@ -8,18 +10,18 @@ const cors = require("cors");
 const mongoose = require("mongoose");
 const passport = require("passport");
 require("./config/passport-setup");
+
 const authRoutes = require("./routes/auth-routes");
 const apiRoutes = require("./routes/api-routes.js");
 
 const cookieSession = require("cookie-session");
-require("dotenv").config();
+
 
 const middleware = require("./middleware");
 const router = require("./routes");
 const keys = require("./config/keys");
 
 const app = express();
-
 app.use(
   cookieSession({
     maxAge: 24 * 60 * 60 * 1000, //1day for authorized cookie
@@ -55,20 +57,19 @@ app.use("/api", apiRoutes);
 app.use("/posts", router);
 app.use("/auth", authRoutes);
 
-if (process.env.NODE_ENV !== "production") {
-  console.log("Development ------------------");
-  const webpackMiddleware = require("webpack-dev-middleware");
-  const webpack = require("webpack");
-  const webpackConfig = require("./webpack.config");
-  app.use(webpackMiddleware(webpack(webpackConfig)));
-} else {
+// if (process.env.NODE_ENV !== "production") {
+//   console.log("Development ------------------");
+//   const webpackMiddleware = require("webpack-dev-middleware");
+//   const webpack = require("webpack");
+//   const webpackConfig = require("./webpack.config");
+//   app.use(webpackMiddleware(webpack(webpackConfig)));
+// } else {
   console.log("Production -----------------");
-
   app.use(express.static("dist"));
   app.get("*", (req, res) => {
     res.sendFile(path.join(__dirname, "dist/index.html"));
   });
-}
+// }
 
 app.use(middleware.notFound);
 app.use(middleware.errorHandler);
