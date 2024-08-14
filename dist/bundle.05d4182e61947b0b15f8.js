@@ -2366,15 +2366,18 @@ var data = exports.data = [{
   color: "#F9AE31",
   txt: "Login with Amazon",
   content: "Amazon.co.jp official site. Low prices at Amazon on books, household goods, apparel, groceries, baby products, car supplies and more. Free shipping ..."
-}, {
-  img: _facebook2.default,
-  name: "facebook",
-  href: "auth/facebook",
-  alt: "facebook-icon",
-  color: "#3B5899",
-  txt: "Login with Facebook",
-  content: "Create an account or log into Facebook. Connect with friends, family and other people you know. Share photos and videos, send messages and get updates."
-}, {
+},
+// {
+//   img: FacebookIcon,
+//   name: "facebook",
+//   href: "auth/facebook",
+//   alt: "facebook-icon",
+//   color: "#3B5899",
+//   txt: "Login with Facebook",
+//   content:
+//     "Create an account or log into Facebook. Connect with friends, family and other people you know. Share photos and videos, send messages and get updates.",
+// },
+{
   img: _github2.default,
   name: "github",
   href: "auth/github",
@@ -2390,22 +2393,26 @@ var data = exports.data = [{
   color: "#CB4024",
   txt: "Login with Google",
   content: "Search the world's information, including webpages, images, videos and more. Google has many special features to help you find exactly what you're looking"
-}, {
-  img: _instagram2.default,
-  name: "instagram",
-  href: "auth/instagram",
-  alt: "instagram-icon",
-  colors: {
-    leftBot: "#fec564",
-    leftTop: "#5258cf",
-    rightTop: "#893dc2",
-    rightBot: "#d9317a",
-    baseCoat: "linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%)"
-  },
-  color: "#d9317a",
-  txt: "Login with Instagram",
-  content: "Create an account or log in to Instagram - A simple, fun & creative way to capture, share photos, videos with friends."
-}, {
+},
+// {
+//   img: InstagramIcon,
+//   name: "instagram",
+//   href: "auth/instagram",
+//   alt: "instagram-icon",
+//   colors: {
+//     leftBot: "#fec564",
+//     leftTop: "#5258cf",
+//     rightTop: "#893dc2",
+//     rightBot: "#d9317a",
+//     baseCoat:
+//       "linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%)",
+//   },
+//   color: "#d9317a",
+//   txt: "Login with Instagram",
+//   content:
+//     "Create an account or log in to Instagram - A simple, fun & creative way to capture, share photos, videos with friends.",
+// },
+{
   img: _spotify2.default,
   name: "spotify",
   href: "auth/spotify",
@@ -4664,13 +4671,11 @@ var App = function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      // console.log(this.props);
       return _react2.default.createElement(
         "div",
         null,
         _react2.default.createElement(_LandingMain2.default, null),
-        _react2.default.createElement(_reactRouterDom.Route, { path: "/", exact: true, component: _Home2.default }),
-        _react2.default.createElement(_reactRouterDom.Route, { path: "/profile", exact: true, component: _Profile2.default })
+        this.props.auth ? _react2.default.createElement(_Profile2.default, this.props) : _react2.default.createElement(_Home2.default, null)
       );
     }
   }]);
@@ -5353,17 +5358,11 @@ var Profile = function Profile(props) {
       selected = _useState2[0],
       setSelected = _useState2[1];
 
-  (0, _react.useEffect)(function () {
-    props.fetchUser();
-  }, []);
   var renderProfile = function renderProfile() {
     var userData = props.auth;
-    // console.log(userData);
     var verifyData = Object.keys(userData).filter(function (key) {
       return userData[key] !== null;
     });
-
-    // console.log(verifyData);
     return _react2.default.createElement(
       "div",
       { className: "needtobeFlexd", style: { display: "flex" } },
@@ -5383,18 +5382,11 @@ var Profile = function Profile(props) {
     );
   };
   var renderContent = function renderContent() {
-    switch (props.auth) {
-      case null:
-        return;
-      case false:
-        props.history.push("/");
-      default:
-        return _react2.default.createElement(
-          _react2.default.Fragment,
-          null,
-          renderProfile()
-        );
-    }
+    return _react2.default.createElement(
+      _react2.default.Fragment,
+      null,
+      renderProfile()
+    );
   };
 
   return _react2.default.createElement(
